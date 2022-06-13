@@ -13,6 +13,7 @@ const volumeSlider = document.querySelector(".volume-slider");
 const videoContainer = document.querySelector(".video-container");
 const timelineContainer = document.querySelector(".timeline-container");
 const video = document.querySelector(".main-video-container .main-video");
+let captions = video.textTracks[0];
 
 let videoList = document.querySelectorAll(".video-list-container .list");
 
@@ -28,7 +29,7 @@ videoList.forEach((vid, index) => {
     document.querySelector(".main-video-container .main-video").play();
     document.querySelector(".main-video-container .main-vid-title").innerHTML =
       title;
-    vid.textTracks[index];
+    captions = video.textTracks[index];
   };
 });
 
@@ -102,7 +103,6 @@ function changePlaybackSpeed() {
 }
 
 // Captions
-const captions = video.textTracks[0];
 captions.mode = "hidden";
 
 captionsBtn.addEventListener("click", toggleCaptions);
