@@ -30,6 +30,7 @@ videoList.forEach((vid, index) => {
     document.querySelector(".main-video-container .main-vid-title").innerHTML =
       title;
     captions = video.textTracks[index];
+    captions.mode = "hidden";
   };
 });
 
