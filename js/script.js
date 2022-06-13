@@ -16,7 +16,7 @@ const video = document.querySelector(".main-video-container .main-video");
 
 let videoList = document.querySelectorAll(".video-list-container .list");
 
-videoList.forEach((vid) => {
+videoList.forEach((vid, index) => {
   vid.onclick = () => {
     videoList.forEach((remove) => {
       remove.classList.remove("active");
@@ -28,6 +28,7 @@ videoList.forEach((vid) => {
     document.querySelector(".main-video-container .main-video").play();
     document.querySelector(".main-video-container .main-vid-title").innerHTML =
       title;
+    video.textTracks[index];
   };
 });
 
