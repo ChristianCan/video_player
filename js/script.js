@@ -28,7 +28,7 @@ videoList.forEach((vid, index) => {
     document.querySelector(".main-video-container .main-video").play();
     document.querySelector(".main-video-container .main-vid-title").innerHTML =
       title;
-    video.textTracks[index];
+    vid.textTracks[index];
   };
 });
 
